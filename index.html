@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/onsenui.css">
+	<link rel="stylesheet" href="css/onsen-css-components.css">
+	<script src="js/onsenui.js"></script>
+</head>
+<body>
+	<ons-navigator swipeable id="myNavigator" page="login.html"></ons-navigator>
+
+	<!-- halaman splash -->
+	<template id="splash.html">
+  		<ons-page id="splash">
+  			<!-- untuk mengganti background -->
+  			<div class="background" style="background-color: #56b3d6"></div>
+
+  			<!-- untuk penempatan konten -->
+    		<div class="content" style="display: flex; align-items: center; justify-content: center;">
+    			<img src="asset/1.jpg" style="width: 150px; border-radius: 50%">
+    		</div>
+  		</ons-page>
+	</template>
+	<!-- -->
+
+
+	<!-- halaman login -->
+	<template id="login.html">
+  		<ons-page id="login">
+
+  			<!-- warna background -->
+  			<div class="background" style="background-color: #ffffff;"></div>
+
+  			<!-- content -->
+  			<div class="content">
+  				<div style="text-align: center; margin-top: 30px;">
+  					<ons-row>
+  						<ons-col>
+  							<img src="asset/1.jpg" style="width: 200px; margin-top: 50px;">
+  						</ons-col>
+  					</ons-row>
+  					<ons-row>
+  						<ons-col>
+  							<ons-input style="width: 50%; margin-top: 30px;" id="username" modifier="underbar" placeholder="Username" float></ons-input>
+  						</ons-col>
+  					</ons-row>
+  					<ons-row>
+  						<ons-col>
+  							<ons-input style="width: 50%; margin-top: 20px;" id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+  						</ons-col>
+  					</ons-row>
+					
+  					<ons-button style="width: 50%; margin-top: 20px;" onclick="login()">Sign in</ons-button>
+  				</div>
+  			</div>
+
+    		<ons-toolbar>
+    			<div class="center">LOGIN</div>
+    		</ons-toolbar>
+  		</ons-page>
+	</template>
+	<!-- -->
+
+	<template id="form.html">
+  		<ons-page id="form">
+
+  			<!-- warna background -->
+  			<div class="background" style="background-color: #ffffff;"></div>
+
+  			<!-- content -->
+  			<div class="content">
+  				<div style="text-align: center; margin-top: 30px;"> 
+  					<ons-row>
+  						<ons-col>
+  							<ons-input style="width: 50%; margin-top: 30px;" id="username"  placeholder="Nama" float></ons-input>
+  						</ons-col>
+  					</ons-row>
+  					<ons-row>
+  						<ons-col>
+  							<ons-input style="width: 50%; margin-top: 20px;" id="password" type="password" placeholder="Password" float></ons-input>
+  						</ons-col>
+  					</ons-row>
+  					<ons-row>
+  						<ons-col>
+  							<ons-list >
+					<ons-list-item tappable>
+						<text>Jenis Kelamin:</text>
+						<label class="left" style="width: 50px; margin-left: 200px; margin-right: 200px;">
+							<ons-radio name="color" input-id="radio-1" checked></ons-radio>
+  						</label>
+  						<label for="radio-1" class="center">
+  							Laki-Laki
+  						</label>
+  					</ons-list-item>
+  					<ons-list-item tappable>
+  						<label class="left" style="width: 50px; margin-left: 200px; margin-right: 200px;">
+  							<ons-radio name="color" input-id="radio-2" checked></ons-radio>
+  						</label>
+  						<label for="radio-2" class="center">
+  							Perempuan
+  						</label>
+  					</ons-list-item>
+  				</ons-list>
+  				<ons-row>
+  					<ons-col>
+  						<ons-input style="width: 50%; margin-top: 30px;" id="alamat"  placeholder="Alamat" float></ons-input>
+  					</ons-col>
+  				</ons-row>
+					
+  					<ons-button style="width: 50%; margin-top: 20px;" onclick="form()">Cetak Data</ons-button>
+  				</div>
+  			</div>
+
+    		<ons-toolbar>
+    			<div class="center">Form Data</div>
+    		</ons-toolbar>
+  		</ons-page>
+	</template>
+
+	<!-- halaman home -->
+	<template id="cetak.html">
+		<ons-page id="cetak">
+			<ons-toolbar>
+				<div class="center">Biodata</div>
+			</ons-toolbar>
+
+			<!-- background color -->
+			<div class="background" style="background-color: #ffffff;">
+
+			<!-- tambah konten -->
+			<div class="content">
+				<!-- isi dengan tampilan biodata kita -->
+				<ons-row>
+  					<ons-col>
+  						<ons-input style="width: 50%; margin-top: 100px; margin-left: 200px;">
+  							NIM : 17.01.4050
+  						</ons-input>
+  					</ons-col>
+  				</ons-row>
+  				<ons-row>
+  					<ons-col>
+  						<ons-input style="width: 50%; margin-left: 200px;">
+  							Nama : Rizki Nur Safitri
+  						</ons-input>
+  					</ons-col>
+  				</ons-row>
+				<ons-row>
+  					<ons-col>
+  						<ons-input style="width: 50%; margin-left: 200px;">
+  							Jenis Kelamin : Perempuan
+  						</ons-input>
+  					</ons-col>
+  				</ons-row>
+  				<ons-row>
+  					<ons-col>
+  						<ons-input style="width: 50%; margin-left: 200px;">
+  							Alamat : Sukoharjo, Jawa Tengah, Indonesia
+  						</ons-input>
+  					</ons-col>
+  				</ons-row>
+
+			</div>
+		</ons-page>
+	</template>
+
+
+	<script>
+		document.addEventListener('init', function(event){
+				var page = event.target;
+
+			if (page.id === 'splash') {
+				setTimeout(function(){
+					document.querySelector('#myNavigator').pushPage('login.html', {data: {}});
+				},3000);
+			}
+		});
+
+
+	function login() {
+  		var username = document.getElementById('username').value;
+  		var password = document.getElementById('password').value;
+
+  		if (username === 'admin' && password === 'admin123') {
+    		document.querySelector('#myNavigator').pushPage('form.html', {data: {}});
+  		} else {
+    		ons.notification.alert('Maaf kata sandi atau username yang anda masukkan salah.');
+  		}
+	};
+
+	function form() {
+    		document.querySelector('#myNavigator').pushPage('cetak.html', {data: {}});
+	};
+
+
+	</script>
+
+</body>
+</html>
